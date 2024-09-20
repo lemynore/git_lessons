@@ -51,9 +51,9 @@ public class MtsByTests {
     @Test
     public void testBlockTitleIsDisplayed() {
         try {
-            // Wait for the visibility of the element and store it in a variable
+
             WebElement blockTitle = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//h2[contains(text(), 'Онлайн пополнение без комиссии')]")));
-            // Perform assertions on the element
+          
             assertTrue(blockTitle.isDisplayed(), "Название блока не найдено");
             System.out.println("Название блока найдено: " + blockTitle.getText());
         } catch (TimeoutException e) {
